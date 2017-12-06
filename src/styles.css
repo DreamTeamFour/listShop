@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* @import "../style/mobile.scss";
+@import "../style/swiper-3.3.1.min.css";
+@import "../style/animate.min.css";  */
+@import "./assets/iconfont/iconfont.css"; 
+
+
+html,body,app-root{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+ul li{list-style: none;}
+a{text-decoration: none;}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.main app-mine{
+    height: 100%;
+    width: 100%;
+}

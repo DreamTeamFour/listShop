@@ -1,0 +1,27 @@
+
+footer{
+    width:100%;
+    height:1.203704rem;
+    background: #f7f2ef;
+    position:absolute;
+    bottom:0;
+}
+.foot_content{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.foot_box{
+    width: .833333rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: .222222rem;
+}
+i{
+    font-size: .425926rem;
+}
