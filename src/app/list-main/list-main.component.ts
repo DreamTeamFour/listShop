@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import $ from "../../utils/jquery-1.11.2.min.js"
-import Swiper from "../../utils/swiper-3.3.1.min.js"
+import * as $ from "jquery"
+import * as Swiper from "swiper"
 
 @Component({
   selector: 'app-list-main',
