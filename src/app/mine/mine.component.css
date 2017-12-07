@@ -11,7 +11,8 @@
 .wrap .top{
     width: 100%;
     height: 5.740741rem;
-    background: #bdbdbd;
+    background: #babbbd url(../../assets/img/bg.png) no-repeat 94% bottom;
+    background-size: 3.138889rem 2.12037rem;
 }
 .wrap .top .header{
     width:100%;
@@ -26,9 +27,22 @@
 .wrap .top .header i:nth-child(2){
     float: right;
 }
-.wrap .top .header .img1{
+.wrap .top .img1{
     width:1.666667rem;
     height:1.666667rem;
+    display: block;
+    margin:.407407rem 44%;
+}
+.wrap .top .login{
+    width:2.314815rem;
+    height:.944444rem;
+    border:1px solid #fff;
+    text-align: center;
+    line-height: .944444rem;
+    color:#fff;
+    font-size: .351852rem;
+    border-radius: .166667rem;
+    margin-left: 41%; 
 }
 .wrap .like{
     width: 100%;
