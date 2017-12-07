@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-classify',
+  selector: 'app-classify.foot-router',
   templateUrl: './classify.component.html',
   styleUrls: ['./classify.component.scss']
 })

@@ -10,21 +10,26 @@
 html,body,app-root{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
     margin: 0;
     padding: 0;
 }
 ul li{list-style: none;}
 a{text-decoration: none;}
-
 .main{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    flex:1;
 }
-.main app-mine{
+.app-mine{
+    flex:1;
+}
+.router{
     height: 100%;
     width: 100%;
+}
+.foot-router{
+    width: 100%;
+    height: 93%
 }

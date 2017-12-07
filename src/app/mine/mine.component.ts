@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mine',
+  selector: 'app-mine.foot-router',
   templateUrl: './mine.component.html',
   styleUrls: ['./mine.component.css']
 })
