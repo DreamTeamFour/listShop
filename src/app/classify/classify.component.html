@@ -4,30 +4,36 @@
 
 <div class="good">
   <h3>精品分类</h3>
-  <ul>
-      <li>厨房</li>
-      <li>厨房</li>
-      <li>厨房</li>
-      <li>厨房</li>
-      <li>厨房</li>
-      <li>厨房</li>
-      <li>厨房</li> 
-      <li>厨房</li>
-      <li>厨房</li>
-  </ul>
+  <div class="classifybox">
+      <div class="wrap" *ngFor="let value of classify">
+        <div class="content">
+          <img src={{value.path}} alt="">
+        </div>
+        <div class="filter" style="background:{{value.color}}">
+          <p>{{value.title}}</p>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="content">
+        </div>
+        <div class="filter"></div>
+      </div>
+  </div>
 </div>
 
 <div class="hot">
       <h3>热门标签</h3>
-      <ul>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-          <li>润唇膏</li>
-      </ul>
+      <div class="hotbox">
+        <div class="wrap" *ngFor="let value of hot">
+          <div class="content">
+            <img src={{value.path}} alt="">
+          </div>
+          <div class="filter">{{value.title}}</div>
+        </div>
+        <div class="wrap">
+          <div class="content">
+          </div>
+          <div class="filter"></div>
+        </div>
+    </div>
   </div>
