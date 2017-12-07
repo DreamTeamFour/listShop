@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .wrap{
     width: 100%;
@@ -11,6 +12,23 @@
     width: 100%;
     height: 5.740741rem;
     background: #bdbdbd;
+}
+.wrap .top .header{
+    width:100%;
+    height:1.055556rem;
+    padding: .203704rem .444444rem;
+}
+.wrap .top .header i{
+    color:#fff;
+    font-size: .666667rem;
+    float: left;
+}
+.wrap .top .header i:nth-child(2){
+    float: right;
+}
+.wrap .top .header .img1{
+    width:1.666667rem;
+    height:1.666667rem;
 }
 .wrap .like{
     width: 100%;
