@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from "jquery"
-import * as Swiper from "swiper"
+// import * as $ from "../../utils/jquery-1.11.2.min.js"
+// import * as Swiper from "../../utils/swiper-3.3.1.min.js"
+  
+declare var $:any;  //定义jquery
+declare var Swiper:any;  //定义jquery
 
 @Component({
   selector: 'app-list-main',
@@ -8,6 +11,8 @@ import * as Swiper from "swiper"
   styleUrls: ['./list-main.component.scss']
 })
 export class ListMainComponent implements OnInit {
+
+  
 
   banner:Array<any> = [
     "../../assets/img/banner/slide1.jpeg",
