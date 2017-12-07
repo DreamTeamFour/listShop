@@ -1,4 +1,6 @@
 <footer>
+  <router-outlet></router-outlet>
+  
   <div class="foot_content">
      <div *ngFor="let foot of footer" class="foot_box" [routerLink] = "foot.path">
        <i [class]="'iconfont '+foot.icon"></i>
