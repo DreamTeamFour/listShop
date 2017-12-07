@@ -14,7 +14,7 @@ import { RegisterComponent } from './register/register.component';
 
 //配置路由
 const routes:Routes = [
-    {path:"",redirectTo:"/foot",pathMatch:"full"},
+    {path:"",redirectTo:"/foot/list",pathMatch:"full"},
     {path:"foot",component:FootComponent,data:[{idPoad:true}],
       children:[
         {path:"",redirectTo:"/list",pathMatch:"full"},
