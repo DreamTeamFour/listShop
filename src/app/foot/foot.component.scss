@@ -8,7 +8,11 @@ footer{
 }
 .foot_content{
     width:100%;
-    height: 7%;
+    height: .925926rem;
+    position: fixed;
+    z-index: 9999;
+    background-color: #eee9e5;
+    bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import * as $ from "../../utils/jquery-1.11.2.min.js"
-// import * as Swiper from "../../utils/swiper-3.3.1.min.js"
-  
+
 declare var $:any;  //定义jquery
 declare var Swiper:any;  //定义jquery
 
@@ -24,54 +22,39 @@ export class ListMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var mySwiper = new Swiper('#topNav', {
-      freeMode: true,
-      freeModeMomentumRatio: 0.5,
-      slidesPerView: 'auto',
-    
+    var mySwiper1 = new Swiper('#koubei',{
+      freeMode : true,
+      slidesPerView : 'auto',
+      freeModeSticky : true ,
     });
-    
-    var swiperWidth = mySwiper.container[0].clientWidth
-    var maxTranslate = mySwiper.maxTranslate();
-    var maxWidth = -maxTranslate + swiperWidth / 2
-    
-    $(".swiper-container").on('touchstart', function(e) {
-      e.preventDefault()
-    })
-    
-    mySwiper.on('tap', function(swiper, e) {
-    
-      e.preventDefault()
-    
-      var slide = swiper.slides[swiper.clickedIndex]
-      var slideLeft = slide.offsetLeft
-      var slideWidth = slide.clientWidth
-      var slideCenter = slideLeft + slideWidth / 2
-      // 被点击slide的中心点
-    
-      mySwiper.setWrapperTransition(300)
-    
-      if (slideCenter < swiperWidth / 2) {
-        
-        mySwiper.setWrapperTranslate(0)
-    
-      } else if (slideCenter > maxWidth) {
-        
-        mySwiper.setWrapperTranslate(maxTranslate)
-    
-      } else {
-    
-        var nowTlanslate = slideCenter - swiperWidth / 2
-    
-        mySwiper.setWrapperTranslate(-nowTlanslate)
-    
+
+    var navSwiper = new Swiper("#tabs",{
+      slidesPerView:'auto',
+      watchSlidesProgress : true,
+       watchSlidesVisibility : true,    // 相当于给  添加  swiper-slide-visible  当前slide可见 
+      onTap(swiper){
+           var clickedIndex = swiper.clickedIndex;
+          
+           contentSwiper.slideTo(clickedIndex);
       }
-    
-      $("#topNav  .active").removeClass('active')
-    
-      $("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
-    
+    })
+  
+    var contentSwiper = new Swiper("#tabs-container",{
+        onSlideChangeEnd(swiper){
+          var activeIndex = swiper.activeIndex;
+          var navSlide =  $("#tabs .swiper-slide ").removeClass("active").eq(activeIndex).addClass("active");
+          if(!navSlide.hasClass("swiper-slide-visible")){
+                if(contentSwiper.activeIndex>navSwiper.activeIndex){
+                    var num = Math.floor(navSwiper.width/navSlide.width()-1);
+                    navSwiper.slideTo(contentSwiper.activeIndex-num);
+                }else{
+                    navSwiper.slideTo(activeIndex);
+                }
+          }
+        }
     })
   }
+
+
 
 }
