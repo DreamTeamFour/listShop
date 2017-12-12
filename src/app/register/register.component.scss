@@ -1,0 +1,110 @@
+.login{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.login .head{
+    width:100%;
+    height:1.074074rem;
+    background: #9099a8;
+}
+.login .head {
+    padding-left:.462963rem; 
+    overflow: hidden;
+    span{
+        display: block;
+        margin-top:.222222rem; 
+        color:white;
+        float: left;
+        i{
+            font-size: .555556rem;
+        }
+    }
+    h1{
+        font-size: .425926rem;
+        font-weight: normal;
+        color:#fff;
+        text-align: center;
+        float: left;
+        margin-left:38%; 
+        line-height: .611111rem;
+    }
+
+}
+.login .main{
+   flex: 1;
+   padding: 3.611111rem 1.388889rem 0;
+   background-size:7.240741rem 2.018519rem;     
+}
+.login .main form{
+    height: 4rem;
+    width:7.240741rem;
+    div{
+        height: 1.203704rem;
+        border-bottom:.009259rem solid #c9c9c9;
+        padding-top:.462963rem; 
+        span{
+            display: block;
+            margin-right:.277778rem; 
+            width:1.222222rem;
+            height: .518519rem;
+            font-size: .351852rem;
+            border-right: .018519rem solid #c9c8cd;
+            float: left;
+        }
+        .phone{
+            float: left;
+            width:5.648148rem;
+        }
+        i{
+            display: block;
+            width:1.685185rem;
+            height:.574074rem;
+            background: #6e439c;
+            border-radius: .092593rem;
+            text-align: center;
+            line-height: .574074rem;
+            font-style:normal;
+            font-size: .259259rem;
+            color:#eeeeee;
+            float: left;
+         }
+    }
+   .pwd{
+        width:5.407407rem;
+        float: left;
+    }
+    input{
+        border: none;
+        outline: none;
+        height: .518519rem; 
+       
+    }
+    input::-webkit-input-placeholder{
+        color:#c9c8cd;
+        font-size: .37037rem;
+    }
+}
+button{
+    width:7.425926rem;
+    height: 1rem;
+    background: #eeeeee;
+    text-align: center;
+    line-height: 1rem;
+    color: #cdcdcd;
+    font-size: .351852rem;
+    border-radius: .092593rem;
+    border: none;
+    margin-top:.574074rem; 
+}
+.login .div1{
+    margin-top:.351852rem;
+    font-size: .240741rem;
+    span:nth-child(2){
+        color:#be9bd3; 
+    }
+    span:nth-child(1){
+        color:#b0b0b0; 
+    }
+}

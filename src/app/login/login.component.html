@@ -1,3 +1,14 @@
-<p>
-  login works!
-</p>
+<div class="login">
+  <div class="head">
+    <span (click)="back()">×</span>
+    <h1>登录</h1>
+  </div>
+  <div class="main">
+    <form (submit)="onSubmit()">
+      <div><span>+86</span><input class="phone" type="text" placeholder="请输入您的手机号"></div>
+      <div><input class="pwd" type="password" placeholder="请输入您的密码"><i class="iconfont icon-yanjing"></i></div>
+      <button>登录</button>
+    </form>
+    <div class="div1"><span (click)="register()">现在注册</span><span>忘记密码?</span></div>
+  </div>
+</div>
