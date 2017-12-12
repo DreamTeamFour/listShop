@@ -38,12 +38,42 @@
    background-size:7.240741rem 2.018519rem;     
 }
 .login .main form{
-    height: 4rem;
+    height: 5.092593rem;
     width:7.240741rem;
+    .div2{
+        border: 0;
+        margin:0; 
+        padding: 0;
+    }
+    .div1{
+        margin-top:.351852rem;
+        border: 0;
+        .sp2{
+            font-size: .240741rem;
+            color:#be9bd3; 
+            width:2.777778rem;
+            border: 0;
+            float: left;
+        }
+        .sp3{
+            font-size: .240741rem;
+            color:#b0b0b0; 
+            border: 0;
+            float: left;
+        }
+    }
     div{
         height: 1.203704rem;
         border-bottom:.009259rem solid #c9c9c9;
-        padding-top:.462963rem; 
+        padding-top:.462963rem;
+        .sp1{
+            display: block;
+            border:0;
+            width:7.240741rem;
+        }
+        .type{
+            border: 0;
+        }
         span{
             display: block;
             margin-right:.277778rem; 
@@ -70,6 +100,7 @@
             color:#eeeeee;
             float: left;
          }
+        
     }
    .pwd{
         width:5.407407rem;
@@ -96,15 +127,5 @@ button{
     font-size: .351852rem;
     border-radius: .092593rem;
     border: none;
-    margin-top:.574074rem; 
-}
-.login .div1{
-    margin-top:.351852rem;
-    font-size: .240741rem;
-    span:nth-child(2){
-        color:#be9bd3; 
-    }
-    span:nth-child(1){
-        color:#b0b0b0; 
-    }
+    margin-top:.462963rem; 
 }
