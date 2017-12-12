@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import {Http} from '@angular/http';
+import { IndexService, Item ,Title} from '../services/index.service';
 
 declare var $:any;  //定义jquery
 declare var Swiper:any;  //定义jquery
@@ -10,7 +13,11 @@ declare var Swiper:any;  //定义jquery
 })
 export class ListMainComponent implements OnInit {
 
-  
+
+  item:Item[]
+  title:Title[]
+
+  list_data:Observable<any>
 
   banner:Array<any> = [
     "../../assets/img/banner/slide1.jpeg",
@@ -19,7 +26,14 @@ export class ListMainComponent implements OnInit {
     "../../assets/img/banner/slide4.jpeg",
     "../../assets/img/banner/slide5.jpeg"
   ]
-  constructor() { }
+  constructor(
+    private http:Http,
+    private indexService:IndexService,
+     
+  ) {
+    this.list_data = this.http.get("http://10.7.183.78/list")
+        .map(res=>res.json())
+  }
 
   ngOnInit() {
     var mySwiper1 = new Swiper('#koubei',{
@@ -27,6 +41,7 @@ export class ListMainComponent implements OnInit {
       slidesPerView : 'auto',
       freeModeSticky : true ,
     });
+    
 
     var navSwiper = new Swiper("#tabs",{
       slidesPerView:'auto',
@@ -44,15 +59,31 @@ export class ListMainComponent implements OnInit {
           var activeIndex = swiper.activeIndex;
           var navSlide =  $("#tabs .swiper-slide ").removeClass("active").eq(activeIndex).addClass("active");
           if(!navSlide.hasClass("swiper-slide-visible")){
-                if(contentSwiper.activeIndex>navSwiper.activeIndex){
-                    var num = Math.floor(navSwiper.width/navSlide.width()-1);
-                    navSwiper.slideTo(contentSwiper.activeIndex-num);
-                }else{
-                    navSwiper.slideTo(activeIndex);
-                }
+              if(contentSwiper.activeIndex>navSwiper.activeIndex){
+                  var num = Math.floor(navSwiper.width/navSlide.width()-1);
+                  navSwiper.slideTo(contentSwiper.activeIndex-num);
+              }else{
+                  navSwiper.slideTo(activeIndex);
+              }
           }
         }
     })
+
+    this.indexService.getTitle().subscribe(
+      title=>{
+        this.title = title;
+        
+      }
+     )
+
+   
+    this.indexService.getProduct().subscribe(
+     item=>{
+       this.item = item;
+       
+     }
+    )
+
   }
 
 

@@ -10,7 +10,8 @@ import { MineComponent } from './mine/mine.component';
 import { ListMainComponent } from './list-main/list-main.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { IndexService } from './services/index.service';
+import {HttpModule} from "@angular/http";
 
 //配置路由
 const routes:Routes = [
@@ -38,9 +39,10 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpModule
   ],
-  providers: [],
+  providers: [IndexService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

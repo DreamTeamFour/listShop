@@ -36,6 +36,7 @@
 	width: 1.185185rem;
 	height: .648148rem;
 	margin-right: .555556rem;
+	line-height: .648148rem;
 }
 
 #tabs {
@@ -114,8 +115,22 @@ img{
 	.swiper-slide{
 		width: 2.62037rem !important;
 		height: 100%;
-		background: red;
 		margin-right: .277778rem;
+		&:nth-child(1){
+			background: url("../../assets/img/koubeiImg/koubei1.png");
+		};
+		&:nth-child(2){
+			background: url("../../assets/img/koubeiImg/koubei2.png");
+		};
+		&:nth-child(3){
+			background: url("../../assets/img/koubeiImg/koubei3.png")
+		};
+		&:nth-child(4){
+			background: url("../../assets/img/koubeiImg/koubei4.png")
+		};
+		&:nth-child(5){
+			background: url("../../assets/img/koubeiImg/koubei5.png")
+		};
 	}
 }
 
@@ -129,7 +144,6 @@ img{
 	.news-list-img{
 		width: 9.074074rem;
 		height: 5.092593rem;
-		background: red;
 		img{
 			width: 100%;
 			height: 100%;
