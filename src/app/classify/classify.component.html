@@ -9,7 +9,7 @@
         <div class="content">
           <img src={{value.path}} alt="">
         </div>
-        <div class="filter" style="background:{{value.color}}">
+        <div class="filter" [style.background]="value.color">
           <p>{{value.title}}</p>
         </div>
       </div>

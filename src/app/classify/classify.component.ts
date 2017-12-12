@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassifyComponent implements OnInit {
 
-  private classify:Array<classify>
+  public classify:Array<classify>
 
   private hot:Array<any>
   constructor() { }
